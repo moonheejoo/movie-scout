@@ -1,45 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>Movie Scout</title>
 
-       <link href="index.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="index.css">
-  </head>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Movie Scout</title>
 
-  <body>
+  <link href="index.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="index.css">
+</head>
 
-
-    <main>
-      <div id="master-search">
-        <form action="#" class="js-search-form">
-            <label for="query"></label>
-            <input type="text" placeholder="Search a movie title" class="js-query">
-            <button type="submit">Search</button>
-          </form>
+<body>
 
 
-        <section>
-          <h2>The IMDB API</h2>
-          <div class="js-search-results-imdb"></div>
-        </section>
-        <section>
-          <h2>The New York Times</h2>
-          <div  class="js-search-results-nyt"></div>
-        </section>
-        <section>
-          <h2>Fandango</h2>
-          <div class="js-search-results-fandango"></div>
-        </section>
-          </div>
+  <main>
+    <div id="master-search">
+      <form action="#" class="js-search-form">
+        <label for="query"></label>
+        <input type="text" placeholder="Search a movie title" class="js-query">
+        <button type="submit">Search</button>
+      </form>
 
-    </main>
-    <script
-         src="https://code.jquery.com/jquery-3.2.1.min.js"
-         integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-         crossorigin="anonymous"></script>
-   <script src="index.js"></script>
-  </body>
+
+      <section>
+        <h2>The IMDB API</h2>
+        <div class="js-search-results-imdb"></div>
+      </section>
+      <section>
+        <h2>The New York Times</h2>
+        <div class="js-search-results-nyt"></div>
+      </section>
+      <section>
+        <h2>Fandango</h2>
+        <div class="js-search-results-fandango"></div>
+      </section>
+    </div>
+
+  </main>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="index.js"></script>
+</body>
+
 </html>

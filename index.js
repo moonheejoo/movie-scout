@@ -25,8 +25,7 @@ function renderMovies(data) {
 
 
 $('.js-search-form').on('submit', event => {
-  event.preventDefault()
-  $(event.target).css('background', 'salmon')
+  event.preventDefault();
 
   const queryTarget = $(event.currentTarget).find('.js-query');
   const query = queryTarget.val();

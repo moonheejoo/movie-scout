@@ -1,15 +1,3 @@
 * {
   box-sizing: border-box;
   }
-
-.api {
-  display: inline-block;
-  width: 33%;
-  height: 200px;
-  border: 1px solid black;
-
-}
-
-.container  {
-  text-align: center;
-}
