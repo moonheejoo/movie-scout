@@ -21,6 +21,10 @@ function cleanMovieData(data) {
 function renderMovies(data) {
   console.log(data);
   $(".js-search-results-imdb").html(data[0].title);
+  `<div class="render-results-imdb">
+   <img class="thumbnail" src="${snippet.poster}">
+    </div>
+  `
 }
 
 
