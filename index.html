@@ -11,7 +11,7 @@
 </head>
 
 <body>
-
+  <nav id="title">Movie Scout</nav>
 
   <main>
     <div id="master-search">
@@ -20,21 +20,25 @@
         <input type="text" placeholder="Search a movie title" class="js-query">
         <button type="submit">Search</button>
       </form>
-
-
-      <section>
-        <h2>The IMDB API</h2>
-        <div class="js-search-results-imdb"></div>
-      </section>
-      <section>
-        <h2>The New York Times</h2>
-        <div class="js-search-results-nyt"></div>
-      </section>
-      <section>
-        <h2>Fandango</h2>
-        <div class="js-search-results-fandango"></div>
-      </section>
     </div>
+
+
+        <div class="container"><section>
+            <div id="left">
+            <h2>The IMDB API</h2>
+            <div class="js-search-results-imdb"></div></div>
+          </section>
+
+          <section>
+            <div id="right">
+            <h2>The New York Times</h2>
+            <div class="js-search-results-nyt"></div></div>
+          </section>
+
+  <!---      <section>
+            <h2>Fandango</h2>
+            <div class="js-search-results-fandango"></div>
+          </section></div-->
 
   </main>
   <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>

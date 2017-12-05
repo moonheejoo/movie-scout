@@ -10,6 +10,18 @@ const NYT = {
   KEY: '9b85bd3d754d4f91a251f25992575fdf'
 };
 
+const METACRITIC = {
+  NAME: 'metacritic',
+  BASE_URL: 'https://api-marcalencc-metacritic-v1.p.mashape.com/search/{dash-separated-search-string}/{mediatype}',
+
+}
+
+// const FANDANGO = {
+//    NAME: 'fangdango',
+//    BASE_URL:
+//    KEY:
+// }
+
 /**
  * Initiates calls to the three unique APIs in our app.
  * @param {string} query
