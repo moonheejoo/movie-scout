@@ -60,6 +60,7 @@ function cleanMovieData(data) {
   return cleanedMovies;
 }
 
+
 function renderImdb(data) {
   console.log(data);
   const imdbResults = `<div class="render-results-imdb">
@@ -72,9 +73,15 @@ function renderImdb(data) {
 }
 
 function renderNyt(data) {
+  const first = data.results[0];
   console.log(data.results);
   const nytResults = `<div class="js-search-results-nyt">
-  <h2>${data.results[0].display_title}</h2></div>
+  <h2>${first.display_title}</h2>
+  <h3><a href="${first.link.url}">${first.headline}</a></h3>
+  <p>Rating: ${first.mpaa_rating}</p>
+  <img src="${first.multimedia.src}">
+  <p>${first.summary_short}</p>
+  </div>
  `
   console.log($("js-search-results-nyt"));
   $('.js-search-results-nyt').html(nytResults);
