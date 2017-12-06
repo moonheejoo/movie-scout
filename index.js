@@ -9,12 +9,10 @@ const NYT = {
   BASE_URL: 'https://api.nytimes.com/svc/movies/v2/reviews/search.json?',
   KEY: '9b85bd3d754d4f91a251f25992575fdf'
 };
-
 const METACRITIC = {
   NAME: 'metacritic',
-  BASE_URL: 'https://api-marcalencc-metacritic-v1.p.mashape.com/search/{dash-separated-search-string}/{mediatype}',
-
-}
+  BASE_URL: 'https://api-marcalencc-metacritic-v1.p.mashape.com/search',
+};
 
 // const FANDANGO = {
 //    NAME: 'fangdango',
@@ -27,13 +25,27 @@ const METACRITIC = {
  * @param {string} query
  */
 function initiateGetRequests(query) {
-  getFromApi(IMDB, query, function(data) {
+  getFromApi(IMDB, query).then(function(data) {
   renderImdb(data);
     console.log(data);
+  }).fail(function (err) {
+    const errorMsg = `<div class="render-results-imdb">
+      <h2>Opps! The IMDB is sleeping right now.<br> Check back later.</h2>
+      </div>
+    `;
+  $('.js-search-results-imdb').html(errorMsg);
+    console.log(err.statusText);
   });
-  getFromApi(NYT, query, function(data) {
+  getFromApi(NYT, query).then(function(data) {
+  console.log(data);
   renderNyt(data);
-  });
+}).fail(function(err) {
+  const errorMsgNyt = `<div class="js-search-results-nyt">
+    <h2>Opps! The New York Times is sleeping right now. Check back later.</h2>
+    </div>
+  `;
+$('.js-search-results-imdb').html(errorMsgNyt);
+});
 }
 /**
  * Makes a call to a single API.
@@ -64,7 +76,14 @@ function getFromApi(apiConfig, query, handleData) {
       title: query
     };
   }
-  $.getJSON(apiConfig.BASE_URL, queryObj, handleData);
+  if (apiConfig.NAME === 'metacritic') {
+    console.log('talking to metacritic');
+    queryObj = {
+      "dash-separated-search-string": query,
+      mediatype: "movie",
+    };
+  }
+  return $.getJSON(apiConfig.BASE_URL, queryObj);
 }
 
 function cleanMovieData(data) {
