@@ -1,14 +1,44 @@
 * {
   box-sizing: border-box;
+  font-family: 'Bungee', cursive;
+/* font-family: 'Open Sans', sans-serif;*/
   }
 
+body {
+  background-color: #7CDBD5;
+}
 #title {
   display: flex;
   justify-content: space-around;
+  font-family: 'Bungee', cursive;
   font-size: 48px;
-  font-family: sans-serif;
-  margin-top: 30px;
+  margin-top: 50px;
   padding: 36px;
+}
+
+.navbar {
+  overlfow: hidden;
+  background-color: #7CDBD5;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  -webkit-box-shadow: 0 6px 2px -2px #ffffff;
+    -moz-box-shadow: 0 6px 4px -4px #ffffff;
+    box-shadow: 0 6px 4px -4px #ffffff;
+}
+
+.navbar a {
+  float: right;
+  display: block;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 14px 16px;
+  margin-right: 24px;
+  text-decoration: none;
+}
+
+.main {
+  margin-top: 30px;
 }
 
 #master-search {
