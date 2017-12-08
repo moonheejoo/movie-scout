@@ -96,9 +96,13 @@ function renderImdb(data) {
   console.log(data);
   const imdbResults = `<div class="render-results-imdb">
     <h2>${data[0].title}</h2>
-    <h3>${data[0].content_rating}</h3>
-    <img src="${data[0].poster.thumb}">
+    <h3>Rating: ${data[0].content_rating}</h3>
+    <img src="${data[0].poster.thumb}"><a href="${data[0].url}"></a>
+    <p>${data[0].description}</p>
     </div>
+    <p>Rating: ${data[0].rating}</p><p>Rating Count: ${data[0].rating_count}</p>
+    <p>Director: ${data[0].director}</p>
+    <p>Writer: ${data[0].writers}</p>
   `;
   $('.js-search-results-imdb').html(imdbResults);
 }
@@ -109,7 +113,7 @@ function renderNyt(data) {
   const nytResults = `<div class="js-search-results-nyt">
   <h2>${first.display_title}</h2>
   <h3><a href="${first.link.url}">${first.headline}</a></h3>
-  <p>Rating: ${first.mpaa_rating}</p>
+  <h3>Rating: ${first.mpaa_rating}</h3>
   <img src="${first.multimedia.src}">
   <p>${first.summary_short}</p>
   </div>

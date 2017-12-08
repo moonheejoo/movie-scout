@@ -1,7 +1,6 @@
 * {
   box-sizing: border-box;
-  font-family: 'Bungee', cursive;
-/* font-family: 'Open Sans', sans-serif;*/
+  font-family: 'Open Sans', sans-serif;
   }
 
 body {
@@ -10,8 +9,8 @@ body {
 #title {
   display: flex;
   justify-content: space-around;
-  font-family: 'Bungee', cursive;
-  font-size: 48px;
+  font-family: 'Bungee', cursive;ß
+  font-size: 200px;
   margin-top: 50px;
   padding: 36px;
 }
@@ -54,19 +53,29 @@ body {
 
 .container {
     margin: 100px;
+    padding: 50px;
     display: flex;
     justify-content: space-around;
     align-items: center;
     text-align: center;
+
   }
 
 #left {
   width: 600px;
+  height: 800px;
+  margin: 25px;
   border: 1px solid black;
 
   }
 
 #right {
   width: 600px;
+  height: 800px;
+  margin: 25px;
   border: 1px solid black;
+  }
+
+  h2 {
+   font-family: 'Bungee', cursive;
   }
