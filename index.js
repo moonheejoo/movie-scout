@@ -25,11 +25,12 @@ const METACRITIC = {
  * @param {string} query
  */
 function initiateGetRequests(query) {
+  renderLoading();
   getFromApi(IMDB, query).then(function(data) {
   renderImdb(data);
     console.log(data);
   }).fail(function (err) {
-    const errorMsg = `<div class="render-results-imdb">
+    const errorMsg = `<div class="imdb-results">
       <h2>Opps! The IMDB is sleeping right now.<br> Check back later.</h2>
       </div>
     `;
@@ -40,7 +41,7 @@ function initiateGetRequests(query) {
   console.log(data);
   renderNyt(data);
 }).fail(function(err) {
-  const errorMsgNyt = `<div class="js-search-results-nyt">
+  const errorMsgNyt = `<div class="nyt-results">
     <h2>Opps! The New York Times is sleeping right now. Check back later.</h2>
     </div>
   `;
@@ -91,10 +92,14 @@ function cleanMovieData(data) {
   return cleanedMovies;
 }
 
+function renderLoading() {
+  $('.js-search-results-imdb, .js-search-results-nyt').html(`<div class="imdb-results">
+  <h2>Loading</h2></div>`)
+};
 
 function renderImdb(data) {
   console.log(data);
-  const imdbResults = `<div class="render-results-imdb">
+  const imdbResults = `<div class="imdb-results">
     <h2>${data[0].title}</h2>
     <h3>Rating: ${data[0].content_rating}</h3>
     <img src="${data[0].poster.thumb}"><a href="${data[0].url}"></a>
@@ -110,7 +115,7 @@ function renderImdb(data) {
 function renderNyt(data) {
   const first = data.results[0];
   console.log(data.results);
-  const nytResults = `<div class="js-search-results-nyt">
+  const nytResults = `<div class="nyt-results">
   <h2>${first.display_title}</h2>
   <h3><a href="${first.link.url}">${first.headline}</a></h3>
   <h3>Rating: ${first.mpaa_rating}</h3>
