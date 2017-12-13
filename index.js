@@ -31,7 +31,7 @@ function initiateGetRequests(query) {
     console.log(data);
   }).fail(function (err) {
     const errorMsg = `<div class="imdb-results">
-      <h2>Opps! The IMDB is sleeping right now.<br> Check back later.</h2>
+      <h3>Zzzzz! The IMDB is sleeping right now.<br> Check back later.</h3>
       </div>
     `;
   $('.js-search-results-imdb').html(errorMsg);
@@ -42,7 +42,7 @@ function initiateGetRequests(query) {
   renderNyt(data);
 }).fail(function(err) {
   const errorMsgNyt = `<div class="nyt-results">
-    <h2>Opps! The New York Times is sleeping right now. Check back later.</h2>
+    <h3>Opps! The New York Times is sleeping right now. Check back later.</h3>
     </div>
   `;
 $('.js-search-results-imdb').html(errorMsgNyt);
@@ -94,7 +94,20 @@ function cleanMovieData(data) {
 
 function renderLoading() {
   $('.js-search-results-imdb, .js-search-results-nyt').html(`<div class="imdb-results">
-  <h2>Loading</h2></div>`)
+  <div class="loading-container">
+  <div class="dot dot-1"></div>
+  <div class="dot dot-2"></div>
+  <div class="dot dot-3"></div>
+</div>
+
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+  <defs>
+    <filter id="goo">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+      <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 21 -7"/>
+    </filter>
+  </defs>
+</svg>`)
 };
 
 function renderImdb(data) {

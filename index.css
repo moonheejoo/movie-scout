@@ -8,6 +8,11 @@
   margin-bottom: 10px;
 }
 
+a {
+  color: #7CDBD5;
+}
+
+
 body {
   background-color: #7CDBD5;
   width: 100%;
@@ -21,6 +26,8 @@ body {
   font-size: 80px;
   margin-top: 75px;
   padding: 36px;
+  color: #0F2A39;
+  filter: drop-shadow(0px 0px 1px rgba(0,0,0,.8));
 }
 
 .navbar {
@@ -28,6 +35,8 @@ body {
   background-color: #7CDBD5;
   position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   width: 100%;
   padding: 10px;
   box-shadow: 0 4px 2px -4px #ffffff;
@@ -40,7 +49,7 @@ body {
   display: block;
   color: #FFFFFF;
   text-align: center;
-  padding: 14px 16px;
+  padding: 16px 16px;
   margin-right: 24px;
   text-decoration: none;
 }
@@ -70,6 +79,7 @@ li a {
 
 li a:hover {
     background-color: #F9BE02;
+    border-radius: 10px;
 }
 
 .main {
@@ -90,6 +100,7 @@ input {
   margin-top: 50px;
   top: 80%;
   transform: translateY(-50%);
+
 }
 
  /*.search-box {
@@ -132,39 +143,52 @@ input {
    font-family: 'Bungee', cursive;
   }
 
-  .search {
-  	padding: 0 30px;
-  	font-size: 18px;
-  	width: 60%;
-  	max-width: 400px;
-  	height: 80px;
-  	border: 5px solid darken(white, 40%);
+.search {
+  padding: 0 30px;
+  font-size: 18px;
+  width: 60%;
+  max-width: 400px;
+  height: 80px;
+  border: 5px solid darken(white, 40%);
   	border-radius: 20px 0 0 20px;
-  }
+}
+
+:focus {
+  outline-color: #F9BE02;
+}
+
+button:focus, button:hover {
+  background-color: #F9BE02;
+}
 
 .submit {
   cursor: pointer;
   border: none;
-  background: url('http://thesuiteworld.com/wp-admin/maint/search-icon-white-png-540.png') no-repeat center center, #1E1E20;
+  background: url('http://thesuiteworld.com/wp-admin/maint/search-icon-white-png-540.png') no-repeat center center, #0F2A39;
   background-size: 35px 35px;
-  	border-radius: 0 20px 20px 0;
-  	padding: 15px 25px;
-  	display: inline-block;
-  	width: 150px;
-  	height: 80px;
+  border-radius: 0 20px 20px 0;
+  padding: 15px 25px;
+  display: inline-block;
+  width: 150px;
+  height: 80px;
 }
 
 .card {
-  padding: 5px 10px;
-  margin-bottom: 25px;
-  background: white;
+  border-top: 50px solid white;
+  background-color: #0F2A39;
+  border-radius: 20px 20px 2px 20px;
+  max-width: 650px;
+  padding: 20px;
+  margin: 0 auto;
+  color: white;
+  width: 100%;
+  height: 650px;
 }
 /* END CONTENT STYLES */
 
 /* BEGIN GRID STYLES */
 .row {
-  background-color: white;
-  max-width: 650px;
+  max-width: 1000px;
   padding: 0 20px;
   margin: 0 auto;
 }
@@ -189,6 +213,82 @@ input {
     background-color: #7CDBD5;
   }
   .col-6 {
-    width: 60%;
+    width: 50%;
   }
+}
+
+.loading-container {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: auto;
+  filter: url('#goo');
+  animation: rotate-move 2s ease-in-out infinite;
+}
+
+.dot {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #000;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.dot-3 {
+  background-color: #7CDBD5;
+  animation: dot-3-move 2s ease infinite, index 6s ease infinite;
+}
+
+.dot-2 {
+  background-color: #F53240;
+  animation: dot-2-move 2s ease infinite, index 6s -4s ease infinite;
+}
+
+.dot-1 {
+  background-color: #F9BE02;
+  animation: dot-1-move 2s ease infinite, index 6s -2s ease infinite;
+}
+
+@keyframes dot-3-move {
+  20% {transform: scale(1)}
+  45% {transform: translateY(-18px) scale(.45)}
+  60% {transform: translateY(-90px) scale(.45)}
+  80% {transform: translateY(-90px) scale(.45)}
+  100% {transform: translateY(0px) scale(1)}
+}
+
+@keyframes dot-2-move {
+  20% {transform: scale(1)}
+  45% {transform: translate(-16px, 12px) scale(.45)}
+  60% {transform: translate(-80px, 60px) scale(.45)}
+  80% {transform: translate(-80px, 60px) scale(.45)}
+  100% {transform: translateY(0px) scale(1)}
+}
+
+@keyframes dot-1-move {
+  20% {transform: scale(1)}
+  45% {transform: translate(16px, 12px) scale(.45)}
+  60% {transform: translate(80px, 60px) scale(.45)}
+  80% {transform: translate(80px, 60px) scale(.45)}
+  100% {transform: translateY(0px) scale(1)}
+}
+
+@keyframes rotate-move {
+  55% {transform: translate(-50%, -50%) rotate(0deg)}
+  80% {transform: translate(-50%, -50%) rotate(360deg)}
+  100% {transform: translate(-50%, -50%) rotate(360deg)}
+}
+
+@keyframes index {
+  0%, 100% {z-index: 3}
+  33.3% {z-index: 2}
+  66.6% {z-index: 1}
 }
