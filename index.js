@@ -20,6 +20,10 @@ const METACRITIC = {
 //    KEY:
 // }
 
+$('.submit').on('click',function () {
+  $('.main-section').show();
+});
+
 /**
  * Initiates calls to the three unique APIs in our app.
  * @param {string} query
