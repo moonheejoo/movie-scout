@@ -1,3 +1,294 @@
+
 * {
   box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
   }
+
+* + * {
+  margin-bottom: 10px;
+}
+
+a {
+  color: #7CDBD5;
+}
+
+
+body {
+  background-color: #7CDBD5;
+  width: 100%;
+	height: 250px;
+}
+
+#title {
+  display: flex;
+  justify-content: space-around;
+  font-family: 'Bungee', cursive;
+  font-size: 80px;
+  margin-top: 75px;
+  padding: 36px;
+  color: #0F2A39;
+  filter: drop-shadow(0px 0px 1px rgba(0,0,0,.8));
+}
+
+.navbar {
+  overlfow: hidden;
+  background-color: #7CDBD5;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  padding: 10px;
+  box-shadow: 0 4px 2px -4px #ffffff;
+  font-family: 'Bungee', cursive;
+  z-index: 999;
+}
+
+.navbar a {
+  float: right;
+  display: block;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 16px 16px;
+  margin-right: 24px;
+  text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+    font-family: 'Bungee', cursive;
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #7CDBD5;
+}
+
+li {
+    float: right;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: 'Bungee', cursive;
+}
+
+li a:hover {
+    background-color: #F9BE02;
+    border-radius: 10px;
+}
+
+.main {
+  margin-top: 30px;
+}
+
+input {
+	box-sizing: border-box;
+	font-size: 13px;
+	vertical-align: top;
+}
+
+#master-search {
+  text-align: center;
+  position: relative;
+  height: 80px;
+  font-size: 0;
+  margin-top: 50px;
+  top: 80%;
+  transform: translateY(-50%);
+
+}
+
+ /*.search-box {
+  margin: 100px auto;
+  width: 300px;
+  height: 50px;
+}
+*/
+
+/*.container {
+    margin: 100px;
+    padding: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+  }*/
+
+
+
+/*#left {
+  width: 600px;
+  height: 800px;
+  margin: 25px;
+  border: 2px solid white;
+  border-radius: 20px;
+  box-shadow: 4px 4px 2px -8px #ffffff;
+  }
+
+#right {
+  width: 600px;
+  height: 800px;
+  margin: 25px;
+  border: 2px solid white;
+  border-radius: 20px;
+  box-shadow: 4px 4px 2px -8px #ffffff;
+  }*/
+
+  h2 {
+   font-family: 'Bungee', cursive;
+  }
+
+.search {
+  padding: 0 30px;
+  font-size: 18px;
+  width: 60%;
+  max-width: 400px;
+  height: 80px;
+  border: 5px solid darken(white, 40%);
+  	border-radius: 20px 0 0 20px;
+}
+
+:focus {
+  outline-color: #F9BE02;
+}
+
+button:focus, button:hover {
+  background-color: #F9BE02;
+}
+
+.submit {
+  cursor: pointer;
+  border: none;
+  background: url('http://thesuiteworld.com/wp-admin/maint/search-icon-white-png-540.png') no-repeat center center, #0F2A39;
+  background-size: 35px 35px;
+  border-radius: 0 20px 20px 0;
+  padding: 15px 25px;
+  display: inline-block;
+  width: 150px;
+  height: 80px;
+}
+
+.card {
+  border-top: 50px solid white;
+  background-color: #0F2A39;
+  border-radius: 20px 20px 2px 20px;
+  max-width: 650px;
+  padding: 20px;
+  margin: 0 auto;
+  color: white;
+  width: 100%;
+  height: 650px;
+}
+/* END CONTENT STYLES */
+
+/* BEGIN GRID STYLES */
+.row {
+  max-width: 1000px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+/* Clearfix */
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.col-6,
+.col-12 {
+  float: left;
+  width: 100%;
+  padding-left: 1.04166666%;
+  padding-right: 1.04166666%;
+}
+
+@media screen and (min-width: 800px) {
+  body {
+    background-color: #7CDBD5;
+  }
+  .col-6 {
+    width: 50%;
+  }
+}
+
+.loading-container {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: auto;
+  filter: url('#goo');
+  animation: rotate-move 2s ease-in-out infinite;
+}
+
+.dot {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #000;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.dot-3 {
+  background-color: #7CDBD5;
+  animation: dot-3-move 2s ease infinite, index 6s ease infinite;
+}
+
+.dot-2 {
+  background-color: #F53240;
+  animation: dot-2-move 2s ease infinite, index 6s -4s ease infinite;
+}
+
+.dot-1 {
+  background-color: #F9BE02;
+  animation: dot-1-move 2s ease infinite, index 6s -2s ease infinite;
+}
+
+@keyframes dot-3-move {
+  20% {transform: scale(1)}
+  45% {transform: translateY(-18px) scale(.45)}
+  60% {transform: translateY(-90px) scale(.45)}
+  80% {transform: translateY(-90px) scale(.45)}
+  100% {transform: translateY(0px) scale(1)}
+}
+
+@keyframes dot-2-move {
+  20% {transform: scale(1)}
+  45% {transform: translate(-16px, 12px) scale(.45)}
+  60% {transform: translate(-80px, 60px) scale(.45)}
+  80% {transform: translate(-80px, 60px) scale(.45)}
+  100% {transform: translateY(0px) scale(1)}
+}
+
+@keyframes dot-1-move {
+  20% {transform: scale(1)}
+  45% {transform: translate(16px, 12px) scale(.45)}
+  60% {transform: translate(80px, 60px) scale(.45)}
+  80% {transform: translate(80px, 60px) scale(.45)}
+  100% {transform: translateY(0px) scale(1)}
+}
+
+@keyframes rotate-move {
+  55% {transform: translate(-50%, -50%) rotate(0deg)}
+  80% {transform: translate(-50%, -50%) rotate(360deg)}
+  100% {transform: translate(-50%, -50%) rotate(360deg)}
+}
+
+@keyframes index {
+  0%, 100% {z-index: 3}
+  33.3% {z-index: 2}
+  66.6% {z-index: 1}
+}

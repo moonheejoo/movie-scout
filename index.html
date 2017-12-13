@@ -5,40 +5,65 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>Movie Scout</title>
-
+  <link href="https://fonts.googleapis.com/css?family=Bungee|Open+Sans" rel="stylesheet">
   <link href="index.css" rel="stylesheet" type="text/css" />
   <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
+  <div class="container">
+    <nav>
+      <div class="navbar">
+        <ul>
+          <li><a href="#ontact.html">Contact</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </div>
+
+        <p id="logo">LOGO HERE</p>
+    </nav>
+
+    <main>
 
 
-  <main>
-    <div id="master-search">
-      <form action="#" class="js-search-form">
-        <label for="query"></label>
-        <input type="text" placeholder="Search a movie title" class="js-query">
-        <button type="submit">Search</button>
-      </form>
+          <h1 id="title">Movie Scout</h1>
+          <div id="master-search">
+              <form action="#" class="js-search-form">
+              <label for="query"></label>
+              <input class="search js-query" type="text" placeholder="Search for a movie title">
+              <button type="submit" button class="submit"></button>
+            </form>
+          </div>
 
 
-      <section>
-        <h2>The IMDB API</h2>
-        <div class="js-search-results-imdb"></div>
-      </section>
-      <section>
-        <h2>The New York Times</h2>
-        <div class="js-search-results-nyt"></div>
-      </section>
-      <section>
-        <h2>Fandango</h2>
-        <div class="js-search-results-fandango"></div>
-      </section>
-    </div>
+          <div class="row">
+            <div class="col-6">
+              <section class="card">
+                <h2>The IMDB API</h2>
+                <div class="js-search-results-imdb"></div>
+              </section>
+            </div>
 
-  </main>
-  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-  <script src="index.js"></script>
-</body>
 
-</html>
+
+            <div class="col-6">
+              <section class="card">
+                <h2>The New York Times</h2>
+                <div class="js-search-results-nyt"></div>
+              </section>
+            </div>
+          </div>
+
+
+    <!---      <section>
+              <h2>Fandango</h2>
+              <div class="js-search-results-fandango"></div>
+            </section></div-->
+
+    </main>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+  </body>
+
+  </html>
