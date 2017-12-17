@@ -133,10 +133,14 @@ function renderNyt(data) {
   const first = data.results[0];
   console.log(data.results);
   const nytResults = `<div class="nyt-results">
-  <h2>${first.display_title}</h2>
+  <h1>${first.display_title}</h1>
   <h3><a href="${first.link.url}">${first.headline}</a></h3>
   <h3>Rating: ${first.mpaa_rating}</h3>
+  <br>
+  <br>
   <img src="${first.multimedia.src}">
+  <br>
+  <br>
   <p>${first.summary_short}</p>
   </div>
  `
