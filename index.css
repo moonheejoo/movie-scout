@@ -23,6 +23,20 @@ h1 {
   color: white;
 }
 
+h2 a{
+   font-family: 'Bungee', cursive;
+   color: white;
+   text-align: center;
+   text-decoration: none;
+   font-family: 'Bungee', cursive;
+   font-size: 50px;
+  }
+
+h2 a:hover {
+      background-color: #F9BE02;
+      border-radius: 10px;
+  }
+
 #welcome {
   display: flex;
   justify-content: space-around;
@@ -103,6 +117,15 @@ li a:hover {
     border-radius: 10px;
 }
 
+#enterli {
+
+  text-align: center;
+  color: white;
+  font-size: 50px;
+  text-decoration: none;
+  font-family: 'Bungee', cursive;
+}
+
 .main {
   margin-top: 30px;
 }
@@ -132,45 +155,7 @@ input {
 
 }
 
- /*.search-box {
-  margin: 100px auto;
-  width: 300px;
-  height: 50px;
-}
-*/
 
-/*.container {
-    margin: 100px;
-    padding: 50px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    text-align: center;
-  }*/
-
-
-
-/*#left {
-  width: 600px;
-  height: 800px;
-  margin: 25px;
-  border: 2px solid white;
-  border-radius: 20px;
-  box-shadow: 4px 4px 2px -8px #ffffff;
-  }
-
-#right {
-  width: 600px;
-  height: 800px;
-  margin: 25px;
-  border: 2px solid white;
-  border-radius: 20px;
-  box-shadow: 4px 4px 2px -8px #ffffff;
-  }*/
-
-  /*h2 {
-   font-family: 'Bungee', cursive;
-  }*/
 
 .search {
   padding: 0 30px;
