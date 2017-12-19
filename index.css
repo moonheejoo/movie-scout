@@ -20,6 +20,17 @@ body {
 
 h1 {
   font-size: 45px;
+  color: white;
+}
+
+#welcome {
+  display: flex;
+  justify-content: space-around;
+  font-family: 'Bungee', cursive;
+  font-size: 80px;
+  margin: 15%;
+  color: white;
+
 }
 
 #title {
@@ -115,8 +126,8 @@ input {
   position: relative;
   height: 80px;
   font-size: 0;
-  margin-top: 50px;
-  margin-bottom: 140px;
+  margin-top: 130px;
+  margin-bottom: 250px;
   transform: translateY(-50%);
 
 }

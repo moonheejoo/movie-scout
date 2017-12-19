@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Movie Scout</title>
+  <link href="https://fonts.googleapis.com/css?family=Bungee|Open+Sans" rel="stylesheet">
+  <link href="index.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+  <div class="container">
+    <nav>
+      <div class="navbar">
+        <ul>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="scout.html">Movie Scout</a></li>
+          <li><a href="index.html">Home</a></li>
+        </ul>
+      </div>
+
+    </nav>
+
+    <main>
+
+
+          <h1 id="title">Movie Scout</h1>
+
+          <div id="master-search">
+              <form action="#" class="js-search-form">
+              <label for="query"></label>
+              <input class="search js-query" type="text" placeholder="Search for a movie title">
+              <button type="submit" button class="submit"></button>
+            </form>
+          </div>
+          <div id="info">
+            <h5></h5>
+            <h4></h5>
+          </div>
+
+          <main class="main-section" hidden>
+            <div class="row">
+              <div class="col-6">
+                <section class="card">
+                  <header>
+                    <h2 id="imdb-header">The IMDB API</h2>
+                  </header>
+                  <main>
+                    <div class="js-search-results-imdb"></div>
+                  </main>
+                </section>
+              </div>
+
+
+
+              <div class="col-6">
+                <section class="card">
+                  <header>
+                    <h2 id="nyt-header">The New York Times</h2>
+                  </header>
+                  <main>
+                    <div class="js-search-results-nyt"></div>
+                  </main>
+                </section>
+              </div>
+            </div>
+          </main>
+
+
+    <!---      <section>
+              <h2>Fandango</h2>
+              <div class="js-search-results-fandango"></div>
+            </section></div-->
+
+    </main>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+  </body>
+
+  </html>
