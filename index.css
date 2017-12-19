@@ -28,7 +28,7 @@ h1 {
   font-family: 'Bungee', cursive;
   font-size: 80px;
   margin-top: 100px;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   color: #0F2A39;
   filter: drop-shadow(0px 0px 1px rgba(0,0,0,.8));
 }
@@ -267,6 +267,7 @@ button:focus, button:hover {
   left: 50%;
   transform: translate(-50%, -50%);
   margin: auto;
+  margin-top: 20px;
   filter: url('#goo');
   animation: rotate-move 2s ease-in-out infinite;
 }
@@ -346,21 +347,28 @@ button:focus, button:hover {
   justify-content: space-around;
 }
 
+  .logos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 10%;
+    padding: 20px 50px;
+}
 
-.logos {
-  float: left;
-  width: 100%;
-  padding: 20px;
-  margin: 10px;
+.container img:hover {
+  opacity: 0.3;
+}
+
+.container img {
+  border-radius: 20px;
 }
 
 img:hover {
     color: #F9BE02;
-    border-radius: 10px;
-
 }
+
 #metacritic {
-  margin: 10px;
   color: white;
 }
 
@@ -397,8 +405,8 @@ img:hover {
 
 .contact-info {
   display: flex;
-  justify-content: space-around;
-  font-family: 'Open Sans', sans-serif;
+  justify-content: center;
+  font-family: 'Bungee', cursive;
   margin-top: 200px;
-  font-size: 20px;
+  font-size: 50px;
 }

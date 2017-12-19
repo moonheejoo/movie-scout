@@ -99,6 +99,7 @@ function cleanMovieData(data) {
 function renderLoading() {
   $('.js-search-results-imdb, .js-search-results-nyt').html(`<div class="imdb-results">
   <div class="loading-container">
+  <br><br>
   <div class="dot dot-1"></div>
   <div class="dot dot-2"></div>
   <div class="dot dot-3"></div>
