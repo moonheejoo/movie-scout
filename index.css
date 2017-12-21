@@ -38,23 +38,7 @@ h2 a:hover {
   }
 
 
-
-#title {
-  display: flex;
-  justify-content: space-around;
-  font-family: 'Bungee', cursive;
-  font-size: 80px;
-  margin-top: 100px;
-  margin-bottom: 20px;
-  color: #0F2A39;
-  filter: drop-shadow(0px 0px 1px rgba(0,0,0,.8));
-}
-
-#info {
-  display: flex;
-  justify-content: space-around;
-  padding: 25px;
-}
+/*NAVIGATION*/
 
 .navbar {
   overlfow: hidden;
@@ -118,9 +102,19 @@ li a:hover {
   font-family: 'Bungee', cursive;
 }
 
-.main {
-  margin-top: 30px;
+/*MAIN*/
+
+#title {
+  display: flex;
+  justify-content: space-around;
+  font-family: 'Bungee', cursive;
+  font-size: 80px;
+  margin-top: 15%;
+  /*margin-bottom: 20px;*/
+  color: #0F2A39;
+  filter: drop-shadow(0px 0px 1px rgba(0,0,0,.8));
 }
+
 
 input {
 	box-sizing: border-box;
@@ -128,29 +122,19 @@ input {
 	vertical-align: top;
 }
 
-#info {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-left: 30%;
-  padding-right: 30%;
-}
-
 #master-search {
   text-align: center;
   position: relative;
   height: 80px;
   font-size: 0;
-  margin-top: 130px;
+  margin-top: 100px;
   margin-bottom: 250px;
   transform: translateY(-50%);
-
 }
 
 
 
 .search {
-  padding: 0 30px;
   font-size: 18px;
   width: 60%;
   max-width: 400px;
@@ -388,7 +372,7 @@ button:focus, button:hover {
     padding: 20px 50px;
 }
 
-.container img:hover {
+.logos img:hover {
   opacity: 0.3;
 }
 
