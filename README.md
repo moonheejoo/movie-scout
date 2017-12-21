@@ -3,4 +3,10 @@ Thinkful API HACK Capstone #1 project
 
 My first capstone at Thinkful, involving APIs and learning CSS.
 
-It was here I learned to enjoy CSS, despite my long familiarity with it. That was probably the most rewarding part, and I'm excited to improve my designs.
+SUMMARY: Allows user to pull up data about new film releases on one dashbaord, in order to help users decide which movies are of interest. Currently, the app pulls from IMDB and the New York Times movie reviews.
+
+TECHNOLOGIES USED: HTML, CSS, Javascript and jQuery.
+
+
+
+
