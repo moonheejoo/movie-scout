@@ -37,15 +37,7 @@ h2 a:hover {
       border-radius: 10px;
   }
 
-#welcome {
-  display: flex;
-  justify-content: space-around;
-  font-family: 'Bungee', cursive;
-  font-size: 80px;
-  margin: 15%;
-  color: white;
 
-}
 
 #title {
   display: flex;
@@ -334,7 +326,51 @@ button:focus, button:hover {
   66.6% {z-index: 1}
 }
 
-/*Resources Styling*/
+/*LANDING PAGE*/
+
+#welcome {
+  display: flex;
+  justify-content: space-around;
+  font-family: 'Bungee', cursive;
+  font-size: 80px;
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-top: 5%;
+  color: white;
+}
+
+#welcome-info {
+  display: flex;
+  justify-content: space-around;
+  margin-left: 30%;
+  margin-right: 30%;
+  margin-top: 1%;
+  margin-bottom: 6%;
+}
+
+#enter-button-container {
+  margin: 0 auto;
+  background-color: #0F2A39;
+  height: 100px;
+  width: 220px;
+  border-radius: 15px;
+  padding: 0px;
+}
+
+#enter-button {
+  color: white;
+  text-align: center;
+  padding: 1px;
+  text-decoration: none;
+  font-family: 'Bungee', cursive;
+}
+
+#enter-button-container:hover {
+  background-color: #F9BE02;
+  border-radius: 10px;
+}*/
+
+/*RESOURCES*/
 
 #resources-header {
   color: white;
@@ -368,7 +404,7 @@ img:hover {
   color: white;
 }
 
-/*About section*/
+/*ABOUT*/
 
 .card2 {
   /*border-top: 50px solid white;*/
@@ -397,7 +433,7 @@ img:hover {
   font-size: 20px;
 }
 
-/*Contact section*/
+/*CONTACT*/
 
 .contact-info {
   display: flex;
