@@ -7,6 +7,7 @@ SUMMARY: Allows user to pull up data about new film releases on one dashbaord, i
 
 TECHNOLOGIES USED: HTML, CSS, Javascript and jQuery.
 
+ISSUES: Not optimized for mobile, IMDB API works intermittently.
 
-
-
+FIXES: Use a mobile first strategy from the beginning, use an official API with higher chances of
+reliability.
