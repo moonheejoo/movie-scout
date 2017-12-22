@@ -11,3 +11,5 @@ ISSUES: Not optimized for mobile, IMDB API works intermittently.
 
 FIXES: Use a mobile first strategy from the beginning, use an official API with higher chances of
 reliability.
+
+<img src="assets/MS_1.png" width="300"/>
